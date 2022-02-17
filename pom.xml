@@ -123,6 +123,19 @@
       </exclusions>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.arrow</groupId>
+      <artifactId>flight-core</artifactId>
+      <version>${dep.arrow.version}</version>
+      <classifier>shaded-ext</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>io.netty</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
     <!--dependency>
       <groupId>org.apache.arrow</groupId>
       <artifactId>flight-grpc</artifactId>
